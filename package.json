@@ -1,0 +1,11 @@
+{
+  "name": "plt2tek",
+  "version": "0.0.0",
+  "description": "Convert plt to tektronix vector stuff.",
+  "main": "plt2tek.ls",
+  "author": "Peter-Paul van Gemerden <mail@ppvg.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "LiveScript": "~1.2.0"
+  }
+}

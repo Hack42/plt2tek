@@ -10,8 +10,8 @@ readStdin (input) ->
     .map (item) ->
       result = []
       if item[1] is 'PU' then result.unshift 29 # GS
-      result ++= y item[2]
-      result ++= x item[3]
+      result ++= y item[3]
+      result ++= x item[2]
     .reduce (collector, item) ->
       collector ++ item
   numeric = [27, 127] ++ numeric

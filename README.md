@@ -3,14 +3,10 @@ Convert plt (which can be exported from Inkscape) to tektronix vector drawing st
 Needs Node.js and LiveScript.
 
     $ apt-get install nodejs
-    # (Or similar)
+      # (Or similar)
 
     $ npm install LiveScript
 
-Then just pipe in your input:
+Then just pipe to and from your input and output files:
 
-    $ echo 'IN;PU0,0;PD0,100;PD100,100;PD100,0;PD0,0;PU;' > test.plt
-
-    $ livescript plt2tek.ls < test.plt > test.tek
-
-Or something.
+    $ livescript plt2tek.ls < hack42.plt > hack42.tek

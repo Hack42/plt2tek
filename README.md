@@ -1,6 +1,6 @@
-Convert plt (which can be exported from Inkscape) to tektronix 40xx vector input.
+Convert plt files (which can be exported from Inkscape) to tektronix 40xx vector input.
 
-Runs on [Node.js][http://nodejs.org/] (`apt-get install nodejs` or similar). Install via npm:
+Runs on [Node.js](http://nodejs.org/) (`apt-get install nodejs` or similar). Install via npm:
 
     $ npm install plt2tek -g
 
@@ -33,4 +33,4 @@ Takes a string and returns an array of octets. For example:
 
 ## License
 
-[MIT][https://raw.github.com/Hack42/plt2tek/master/LICENSE]
+[MIT](https://raw.github.com/Hack42/plt2tek/master/LICENSE)

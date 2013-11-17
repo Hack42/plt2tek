@@ -1,11 +1,19 @@
 {
   "name": "plt2tek",
-  "version": "0.0.1",
-  "description": "Convert plt to tektronix vector stuff.",
-  "main": "plt2tek.ls",
+  "version": "0.1.1",
+  "description": "Convert plt to tektronix 40xx vector input.",
+  "main": "index.js",
+  "directories": {
+    "bin": "./bin"
+  },
   "author": "Peter-Paul van Gemerden <mail@ppvg.nl>",
   "license": "MIT",
-  "dependencies": {
-    "LiveScript": "~1.2.0"
+  "devDependencies": {
+    "LiveScript": "~1.2.0",
+    "mocha": "~1.14.0",
+    "should": "~2.1.0"
+  },
+  "scripts": {
+    "prepublish": "./node_modules/.bin/livescript -c index.ls"
   }
 }

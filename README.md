@@ -10,7 +10,9 @@ Runs on [Node.js](http://nodejs.org/) (`apt-get install nodejs` or similar). Ins
 =======
     $ npm install plt2tek -g
 ## Preparation
- In a Inkscape drawing, choose Document Properties and set Deault units to mm. position your drawing in the bottom left corner of the page and resize it to make is smaller than 29x21 mm. Yes, that is very small indeed. it will plot full screen on the tek. anything bigger will plot strange thins. 
+ In a Inkscape drawing, choose Document Properties and set Default units to mm. position your drawing in the bottom left corner of the page and resize it to make is smaller than 29x21 mm. Yes, that is very small indeed. Don't worry, it will plot full screen on the tek. Anything bigger will plot strange things. 
+ Technical blabla: the x-y coord. system has a max of 1024x767 on the tek 4002a ans 4014. hp plot files have a way bigger x-y coord. set. Limiting this by resizing eliminates warping in the script.
+
 ## Usage
 >>>>>>> 43814462bf0a21565204adfe3164b89d1fdb4834
 

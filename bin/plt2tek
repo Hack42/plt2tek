@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+var Buffer = require('buffer').Buffer;
+
+var plt2tek = require('../');
+var argv = process.argv.slice(2);
+
+if (argv.length > 0) {
+  filename = path.resolve(argv[0]);
+  fs.readFile(filename, 'utf-8', function(err, data) {
+    if (err) throw err;
+    var output = plt2tek(data);
+    process.stdout.write(new Buffer(output));
+  });
+}

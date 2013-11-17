@@ -1,16 +1,36 @@
-Convert plt (which can be exported from Inkscape) to tektronix vector drawing stuff.
+Convert plt (which can be exported from Inkscape) to tektronix 40xx vector input.
 
-Needs Node.js and LiveScript.
+Runs on [Node.js][http://nodejs.org/] (`apt-get install nodejs` or similar). Install via npm:
 
-    $ apt-get install nodejs
-      # (Or similar)
+    $ npm install plt2tek -g
 
-    $ npm install LiveScript
+## Usage
 
-Then just pipe to and from your input and output files:
+### On the command line
 
-    $ livescript plt2tek.ls < hack42.plt > hack42.tek
+    $ plt2tek [inputfile]
 
-The result:
+For example:
 
-![The Hack42 logo on a Tektronix](https://raw.github.com/Hack42/plt2tek/master/proof.jpg)
+    $ plt2tek hack42.plt > hack42.tek
+
+![The Hack42 logo on a Tektronix](https://raw.github.com/Hack42/plt2tek/master/assets/proof.jpg)
+
+### As a node.js module
+
+    plt2tek(input);
+
+Takes a string and returns an array of octets. For example:
+
+    var fs = require('fs');
+    var Buffer = require('buffer').Buffer;
+    var plt2tek = require('plt2tek');
+
+    var input = 'IN;PU0,0;PD0,100;PD100,100;PD100,0;PD0,0;PU;';
+    var output = pl2tek(input); // [29, 32, ...]
+
+    fs.writeFile('output.tek', new Buffer(output));
+
+## License
+
+[MIT][https://raw.github.com/Hack42/plt2tek/master/LICENSE]

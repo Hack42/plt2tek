@@ -36,7 +36,7 @@ function convertNodes input
 
 function valueToBytes axis, value
   # Convert an x or y value into an array of octets
-  values = split value
+  values = split adjust value
   high = TEK.PREFIX.HIGH[axis] + values[0]
   low  = TEK.PREFIX.LOW[axis]  + values[1]
   [high, low]
@@ -47,3 +47,6 @@ function split value
   low = value % 32
   [high, low]
 
+function adjust value
+  # One point in HPGL is 25 µm (so 1016 units per inch). We assume 90 dpi.
+  value / 1016 * 90

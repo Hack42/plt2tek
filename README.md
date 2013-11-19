@@ -2,19 +2,11 @@ Convert plt files (which can be exported from Inkscape) to tektronix 40xx vector
 
 Runs on [Node.js](http://nodejs.org/) (`apt-get install nodejs` or similar). Install via npm:
 
-<<<<<<< HEAD
-    $ apt-get install nodejs npm
-      # (Or similar)
-
-    $ npm install liveScript
-=======
     $ npm install plt2tek -g
-## Preparation
- In a Inkscape drawing, choose Document Properties and set Default units to mm. position your drawing in the bottom left corner of the page and resize it to make is smaller than 29x21 mm. Yes, that is very small indeed. Don't worry, it will plot full screen on the tek. Anything bigger will plot strange things. 
- Technical blabla: the x-y coord. system has a max of 1024x767 on the tek 4002a ans 4014. hp plot files have a way bigger x-y coord. set. Limiting this by resizing eliminates warping in the script.
+
+It assumes 90dpi input, so if you export .plt from Inkscape, the pixel counts should match (i.e. you can set your document size to 1024 × 768 px).
 
 ## Usage
->>>>>>> 43814462bf0a21565204adfe3164b89d1fdb4834
 
 ### On the command line
 
